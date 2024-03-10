@@ -11,8 +11,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             
             <Grid.ColumnDefinitions>
@@ -22,38 +21,31 @@
 
             <TextBlock Text="Nazwa firmy" Grid.Row="0"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       Margin="10,0,0,0"
-                       Foreground="Black"/>
+                       HorizontalAlignment="Center"
+                       Foreground="Black"
+                       FontSize="15"/>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" >
                 <RadioButton Content="Lista restauracji"
-                             VerticalAlignment="Center"
-                             HorizontalAlignment="Center"
-                             />
-                <RadioButton Content="Mapa restauracji"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                             
-                            />
-                <RadioButton Content="Ulubione restauracje"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            />
-
+                             Height="40"/>
+                <RadioButton Content="Mapa restauracji" 
+                             Height="40"/>
+                <RadioButton Content="Ulubione restauracje" 
+                             Height="40"/>
             </StackPanel>
-            <TextBox Text ="Ulica, nr domu" 
+
+            <!--<TextBox Text ="Ulica, nr domu" 
                      Grid.Row="1" Grid.Column="1"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left"
                      
-                     />
-            <Button Grid.Row="1" 
+                     />-->
+            <!--<Button Grid.Row="1" 
                     Grid.Column="1"
                     Content="Szikaj Restauracje"
                     Margin="300,0,0,0"
                     Width="100"
-                    />
+                    />-->
 
         </Grid>
     </Border>
