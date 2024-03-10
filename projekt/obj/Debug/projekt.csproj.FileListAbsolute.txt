@@ -1,0 +1,15 @@
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.csproj.AssemblyReference.cache
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\App.g.cs
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt_MarkupCompile.cache
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt_MarkupCompile.lref
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\MainWindow.g.cs
+C:\Users\Pawel\source\repos\projekt\projekt\bin\Debug\projekt.exe.config
+C:\Users\Pawel\source\repos\projekt\projekt\bin\Debug\projekt.exe
+C:\Users\Pawel\source\repos\projekt\projekt\bin\Debug\projekt.pdb
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\MainWindow.baml
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.g.resources
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.Properties.Resources.resources
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.csproj.GenerateResource.cache
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.csproj.CoreCompileInputs.cache
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.exe
+C:\Users\Pawel\source\repos\projekt\projekt\obj\Debug\projekt.pdb
