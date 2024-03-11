@@ -1,0 +1,51 @@
+﻿<Window x:Class="p4_projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:p4_projekt"
+        mc:Ignorable="d"
+        Title="Restaurant app" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border Background="Orange" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Nazwa firmy" Grid.Row="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="Black"
+                       FontSize="15"/>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+                <RadioButton Content="Lista restauracji"
+                             Height="40"
+                             
+                             FontSize="12"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Mapa restauracji"
+                             Height="40"
+                             
+                             FontSize="12"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Ulubione restauracje"
+                             Height="40"
+                             
+                             FontSize="12"
+                             Style="{StaticResource MenuButtonTheme}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
