@@ -7,85 +7,177 @@
         mc:Ignorable="d"
         Title="Restaurant app" Height="450" Width="800"
         WindowStyle="None"
-        ResizeMode="NoResize"
-        Background="Transparent"
-        AllowsTransparency="True">
-
-    <Border Background="Orange" CornerRadius="10">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="140"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="50"/>
-            </Grid.ColumnDefinitions>
-            <!--nazwa-->
+              
+        AllowsTransparency="True"
+        Background="Orange"
+        
+        >
+    <!--Background="Transparent"-->
+    <!--<Border Background="Orange" CornerRadius="10">-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        
+        <!--nazwa firmy-->
+        <Border Grid.Column="0"
+                Grid.Row="0"
+                Background="Black">
             <TextBlock Text="Nazwa firmy" Grid.Row="0"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Foreground="Black"
-                       FontSize="15"
-                       />
-            <!--zaokraglenie koncow-->
-            <Border Grid.Row="0"
-                    Grid.Column="1"
-                    VerticalAlignment="Center"
-                    Background="Gray"
-                    Margin="10,0,350,0"
-                    CornerRadius="5"
-                    >
-                <TextBlock Text="Adres"
-                        Margin="10,0,0,0"
-                        />
-                
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Foreground="Orange"
+               FontSize="15"
+               />
+        </Border>
+        <!--wyszukiwarka-->
+        <Border Background="Black"
+                Grid.Column="1">
+            <Border Grid.Column="1"
+        Background="Gray"
+        Height="30"
+        VerticalAlignment="Center"
+        Margin="20,0,190,0"
+        CornerRadius="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0"
+            Style="{StaticResource Textbox1}">
+                    </TextBox>
+                    <Border CornerRadius="5"
+                Grid.Column="1"
+                >
+                        <!--<Button  Content="Wyszukaj"                          
+             HorizontalAlignment="Center"
+             Width="60"
+             Height="20"
+             Margin="10,0,10,0"
+             Foreground="White"                        
+             Background="Orange"/>-->
+                        <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        >
+                            <RadioButton Content="Szukaj"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Width="50"
+                             Height="30"
+                             Margin="10,0,10,0"                                    
+                             >
 
+                            </RadioButton>
+                        </StackPanel>
+                    </Border>
 
-
+                </Grid>
             </Border>
-                <Button
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    Width="60"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Margin="300,0,0,0"
-                    >
-                    Wyszukaj
-                </Button>
+        </Border>
+        <!--znacznik do logowania-->
+        <Border Grid.Column="2"
+                Grid.Row="0"
+                Background="Black">
             <StackPanel
-                    Grid.Row="0" 
-                    Grid.Column="2">
+            Grid.Row="0" 
+            Grid.Column="3">
 
-                <RadioButton  Content ="znacznik uzytkownika do logowania"
-                            
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Height="30"
-                            Width="30"
-                            Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton  Content ="znacznik uzytkownika do logowania"                            
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Foreground="white"
+                    Height="30"
+                    Width="30"
+                    Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
-
-
+        </Border>
+        <!--przyciski-->
+        <Border Grid.Column="0"
+                Grid.Row="1"
+                Background="#2E1D19"
+                >
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                 <RadioButton Content="Lista restauracji"
-                             Height="40"
-                             
-                             FontSize="12"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                     Height="40"
+                     Foreground="White"
+                     FontSize="12"
+                     Style="{StaticResource MenuButtonTheme}"/>
                 <RadioButton Content="Mapa restauracji"
-                             Height="40"
-                             
-                             FontSize="12"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                     Height="40"
+                     Foreground="White"
+                     FontSize="12"
+                     Style="{StaticResource MenuButtonTheme}"/>
                 <RadioButton Content="Ulubione restauracje"
-                             Height="40"
-                             
-                             FontSize="12"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                     Height="40"
+                     Foreground="White"
+                     FontSize="12"
+                     Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
-        </Grid>
-    </Border>
+
+        </Border>
+        <!--zdjecia jedzenia-->
+        <Border Grid.Column="1"
+                Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="0"
+                       Grid.Row="0"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="0"
+                       Grid.Row="1"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="0"
+                       Grid.Row="2"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="1"
+                       Grid.Row="0"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="1"
+                       Grid.Row="1"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="1"
+                       Grid.Row="2"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="2"
+                       Grid.Row="0"                     
+                       />
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="2"
+                       Grid.Row="1"                     
+                       />
+
+                <Image Source="/images/kebab.jpg"
+                       Grid.Column="2"
+                       Grid.Row="2"                     
+                       />
+
+
+            </Grid>
+        </Border>
+    </Grid>
 </Window>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace p4_projekt
+namespace p4_projekt.tabele
 {
     using System;
     using System.Data.Entity;

@@ -23,7 +23,6 @@ C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\EntityFramework.SqlServer
 C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\EntityFramework.xml
 C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.csproj.AssemblyReference.cache
-C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\button\button.baml
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MainWindow.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\App.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt_Content.g.cs
@@ -38,3 +37,5 @@ C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.csproj.CoreCom
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.csproj.Up2Date
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.exe
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.pdb
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\Theme\button.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\Theme\TextBOX.baml
