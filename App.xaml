@@ -2,13 +2,34 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:p4_projekt"
+             xmlns:viewmodel="clr-namespace:p4_projekt.MVVM.ViewModel"
+             xmlns:view="clr-namespace:p4_projekt.MVVM.View"
              StartupUri="MainWindow.xaml">
+    
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/button.xaml"/>
                 <ResourceDictionary Source="Theme/TextBOX.xaml"/>
+                <ResourceDictionary Source="Theme/LoginButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewmodel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:RestaurantsViewModel}">
+                <view:RestaurantView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:MapViewModel}">
+                <view:MapView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodel:FavouriteRestaurantViewModel}">
+                <view:FavouriteRestaurantView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

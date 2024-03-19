@@ -39,3 +39,13 @@ C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.exe
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.pdb
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\Theme\button.baml
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\Theme\TextBOX.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\HomeView.g.cs
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\HomeView.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\RestaurantView.g.cs
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\RestaurantView.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\MapView.g.cs
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\MapView.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\FavouriteRestaurantView.g.cs
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\FavouriteRestaurantView.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\Theme\LoginButton.baml

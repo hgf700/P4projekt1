@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\mvvm\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mvvm\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\theme\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:theme\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\theme\\textbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:theme\\textbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-12T11:38:38.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T21:42:06.524Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TextBOX.xaml",
-              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Theme\\TextBOX.xaml",
-              "RelativeDocumentMoniker": "Theme\\TextBOX.xaml",
-              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Theme\\TextBOX.xaml",
-              "RelativeToolTip": "Theme\\TextBOX.xaml",
+              "DocumentIndex": 0,
+              "Title": "HomeView.xaml",
+              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\HomeView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\View\\HomeView.xaml",
+              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\HomeView.xaml",
+              "RelativeToolTip": "MVVM\\View\\HomeView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-14T21:02:11.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "button.xaml",
-              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Theme\\button.xaml",
-              "RelativeDocumentMoniker": "Theme\\button.xaml",
-              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Theme\\button.xaml",
-              "RelativeToolTip": "Theme\\button.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-14T21:26:34.683Z",
+              "WhenOpened": "2024-03-19T12:21:14.751Z",
               "EditorCaption": ""
             }
           ]

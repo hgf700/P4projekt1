@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="p4_projekt.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:p4_projekt.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="800"
+             Background="Purple"
+             >
+    <Grid>
+        <StackPanel>
+            <!--poczatek-->
+            <TextBlock Foreground="White"
+                       Margin="10,10,0,10"
+                       FontSize="20"
+                       HorizontalAlignment="Left">
+                Zamów Jedzenie i nie 
+                <LineBreak/>
+                tylko
+            </TextBlock>
+            <TextBlock Foreground="White"
+                       Margin="10,10,0,10"
+                       FontSize="20"
+                       HorizontalAlignment="Left">
+                Restauracje z dostawą w pobliżu
+            </TextBlock>
+            <StackPanel>
+                <TextBlock Foreground="White"
+                       HorizontalAlignment="Center"
+                       FontSize="20">
+                    Jak zamawiać?
+                </TextBlock>
+                <TextBlock Foreground="Orange"
+                       HorizontalAlignment="Center"
+                       FontSize="20">
+                    To Proste.
+                </TextBlock>
+            </StackPanel>
+            <!--1 ikona-->
+            <StackPanel 
+                        HorizontalAlignment="Left">
+                <StackPanel>
+                    <Image Source="/images/mapmarker.png"
+                       Width="22"
+                       Height="30"
+                       HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Powiedz nam gdzie sie znajdujesz"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="15"
+                           Width="300">
+                </TextBlock>
+
+
+                <TextBlock Foreground="White"
+                           HorizontalAlignment="Left"
+                           FontSize="15"
+                           Width="300">
+                        Pokażemy ci sklepy i restauracje w okolicy
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <!--2 ikona-->
+            <StackPanel Width="400"
+                        Height="100">
+                <Image Source="/images/burger.png"
+                       Width="30"
+                       Height="30"/>
+                <TextBlock Foreground="White"
+                       HorizontalAlignment="Center"
+                       FontSize="15">
+                    Znajdź to, czego potrzebujesz
+                </TextBlock>
+                <TextBlock Foreground="White"
+                       HorizontalAlignment="Center"
+                           
+                       FontSize="15">
+                    Szukaj produktów, jedzenia, sklepów i różnych 
+                    <LineBreak/>
+                    typów kuchni
+                </TextBlock>
+            </StackPanel>
+            <!--3 ikona-->
+            <StackPanel HorizontalAlignment="Right">
+                <Image Source="/images/receiverorder.png"
+                       Width="58"
+                       Height="30"/>
+                <TextBlock Foreground="White"
+                       HorizontalAlignment="Center"
+                       FontSize="15">
+                    Zamów z dostawą lub odbiorem
+                </TextBlock>
+                <TextBlock Foreground="White"
+                       HorizontalAlignment="Center"
+                       FontSize="15">
+                    poinformujemy cię o postępach w realizacji 
+                    <LineBreak/>
+                    zamówienia
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Height="300">
+                <Border Background="#255261"
+                        Height="300">
+                    <TextBlock Margin="20"
+                               >
+                        Pobierz aplikacje
+                    </TextBlock>
+                    
+                </Border>
+            </StackPanel>
+
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

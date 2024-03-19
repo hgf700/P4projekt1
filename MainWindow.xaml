@@ -3,18 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="clr-namespace:p4_projekt.MVVM.ViewModel"
+        xmlns:view="clr-namespace:p4_projekt.MVVM.View"
         xmlns:local="clr-namespace:p4_projekt"
         mc:Ignorable="d"
-        Title="Restaurant app" Height="450" Width="800"
-        WindowStyle="None"
-              
-        AllowsTransparency="True"
-        Background="Orange"
+        Title="Restaurant app" Height="1080" Width="1920"
         
-        >
-    <!--Background="Transparent"-->
-    <!--<Border Background="Orange" CornerRadius="10">-->
-    <Grid>
+        Background="Transparent">
+    <!--WindowStyle="None"            
+AllowsTransparency="True"-->
+    <!-- widok-->
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
+    
+    <Border Background="Orange" >
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition/>
@@ -24,8 +28,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
-        
-        
         
         <!--nazwa firmy-->
         <Border Grid.Column="0"
@@ -86,98 +88,57 @@
         <Border Grid.Column="2"
                 Grid.Row="0"
                 Background="Black">
-            <StackPanel
-            Grid.Row="0" 
+            <StackPanel Grid.Row="0" 
             Grid.Column="3">
-
-                <RadioButton  Content ="znacznik uzytkownika do logowania"                            
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Foreground="white"
-                    Height="30"
-                    Width="30"
-                    Style="{StaticResource MenuButtonTheme}"/>
+                    <RadioButton Margin="5,5,5,5"
+                               Width="40"
+                               Height="30"
+                               Style="{StaticResource loginbutton}"
+                               >
+                    </RadioButton>
+                
+                
             </StackPanel>
         </Border>
-        <!--przyciski-->
+        <!--przyciski/zmiana widoku -->
         <Border Grid.Column="0"
                 Grid.Row="1"
                 Background="#2E1D19"
                 >
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-                <RadioButton Content="Lista restauracji"
-                     Height="40"
-                     Foreground="White"
-                     FontSize="12"
-                     Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Mapa restauracji"
-                     Height="40"
-                     Foreground="White"
-                     FontSize="12"
-                     Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Ulubione restauracje"
-                     Height="40"
-                     Foreground="White"
-                     FontSize="12"
-                     Style="{StaticResource MenuButtonTheme}"/>
+                    <RadioButton Content="Strona Główna"
+                                 Height="40"
+                                 Foreground="White"
+                                 FontSize="12"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 IsChecked="True"
+                                 Command="{Binding HomeViemCommand}"/>
+                    <RadioButton Content="Lista restauracji"
+                                 Height="40"
+                                 Foreground="White"
+                                 FontSize="12"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding DiscoveryViewCommand}"/> 
+                    <RadioButton Content="Mapa restauracji"
+                                 Height="40"
+                                 Foreground="White"
+                                 FontSize="12"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding MapViewCommand}"/>
+                    <RadioButton Content="Ulubione restauracje"
+                                 Height="40"
+                                 Foreground="White"
+                                 FontSize="12"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding FavouriteRestaurantViewCommand}"/>
             </StackPanel>
 
         </Border>
-        <!--zdjecia jedzenia-->
-        <Border Grid.Column="1"
-                Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="0"
-                       Grid.Row="0"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="0"
-                       Grid.Row="1"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="0"
-                       Grid.Row="2"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="1"
-                       Grid.Row="0"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="1"
-                       Grid.Row="1"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="1"
-                       Grid.Row="2"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="2"
-                       Grid.Row="0"                     
-                       />
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="2"
-                       Grid.Row="1"                     
-                       />
-
-                <Image Source="/images/kebab.jpg"
-                       Grid.Column="2"
-                       Grid.Row="2"                     
-                       />
-
-
-            </Grid>
-        </Border>
-    </Grid>
+        <!--widok-->
+        <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Content="{Binding CurrentView}"/>
+            
+        </Grid>
+    </Border>
 </Window>

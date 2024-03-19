@@ -13,10 +13,10 @@ namespace p4_projekt.tabele
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RestauracjeEntities : DbContext
+    public partial class RestaurantsEntities : DbContext
     {
-        public RestauracjeEntities()
-            : base("name=RestauracjeEntities")
+        public RestaurantsEntities()
+            : base("name=RestaurantsEntities")
         {
         }
     
@@ -25,7 +25,7 @@ namespace p4_projekt.tabele
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Restauracje> Restauracje { get; set; }
+        public virtual DbSet<Blog> Blogs { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
     }
 }
