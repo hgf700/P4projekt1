@@ -25,7 +25,6 @@ C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\EntityFramework.SqlServer
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.csproj.AssemblyReference.cache
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MainWindow.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\App.g.cs
-C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt_Content.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt_MarkupCompile.cache
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt_MarkupCompile.lref
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\App.baml
@@ -49,3 +48,4 @@ C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\MapView.baml
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\FavouriteRestaurantView.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\FavouriteRestaurantView.baml
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\Theme\LoginButton.baml
+C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.Migrations.RestaurantMigration.resources

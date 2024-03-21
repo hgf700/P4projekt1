@@ -7,12 +7,9 @@
         xmlns:view="clr-namespace:p4_projekt.MVVM.View"
         xmlns:local="clr-namespace:p4_projekt"
         mc:Ignorable="d"
-        Title="Restaurant app" Height="1080" Width="1920"
+        Title="Restaurant app" Height="600" Width="800"
         
         Background="Transparent">
-    <!--WindowStyle="None"            
-AllowsTransparency="True"-->
-    <!-- widok-->
     <Window.DataContext>
         <viewmodel:MainViewModel/>
     </Window.DataContext>
@@ -135,10 +132,9 @@ AllowsTransparency="True"-->
 
         </Border>
         <!--widok-->
-        <ContentControl Grid.Row="1"
+            <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Content="{Binding CurrentView}"/>
-            
         </Grid>
     </Border>
 </Window>

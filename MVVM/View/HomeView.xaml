@@ -9,6 +9,16 @@
              Background="Purple"
              >
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <StackPanel>
             <!--poczatek-->
             <TextBlock Foreground="White"
@@ -37,7 +47,7 @@
                     To Proste.
                 </TextBlock>
             </StackPanel>
-            <!--1 ikona-->
+            <!--1 ikona i dodac columny i row i dotego ikony baza danych entity framework i db context-->
             <StackPanel 
                         HorizontalAlignment="Left">
                 <StackPanel>
@@ -64,14 +74,14 @@
                 </StackPanel>
             </StackPanel>
             <!--2 ikona-->
-            <StackPanel Width="400"
-                        Height="100">
+            <StackPanel HorizontalAlignment="Center">
                 <Image Source="/images/burger.png"
                        Width="30"
                        Height="30"/>
                 <TextBlock Foreground="White"
                        HorizontalAlignment="Center"
-                       FontSize="15">
+                       FontSize="15"
+                           Margin="0,5,0,5">
                     Znajdź to, czego potrzebujesz
                 </TextBlock>
                 <TextBlock Foreground="White"
@@ -79,7 +89,11 @@
                            
                        FontSize="15">
                     Szukaj produktów, jedzenia, sklepów i różnych 
-                    <LineBreak/>
+
+                </TextBlock>
+                <TextBlock Foreground="White"
+                       HorizontalAlignment="Center"          
+                       FontSize="15">
                     typów kuchni
                 </TextBlock>
             </StackPanel>
@@ -110,7 +124,9 @@
                         Pobierz aplikacje
                     </TextBlock>
                     
+                    
                 </Border>
+
             </StackPanel>
 
         </StackPanel>
