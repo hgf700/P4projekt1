@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\USER098\Documents\GitHub\P4projekt1\App.xaml
-8-643015011
-
-21-1282576974
-18-1984120589
-MVVM\View\FavouriteRestaurantView.xaml;MVVM\View\HomeView.xaml;MVVM\View\RestaurantView.xaml;MVVM\View\MapView.xaml;Theme\button.xaml;Theme\LoginButton.xaml;Theme\TextBOX.xaml;MainWindow.xaml;
+10-1186847171
+1-245944726
+28-357505375
+31829723019
+MVVM\View\FavouriteRestaurantView.xaml;MVVM\View\HomeView.xaml;MVVM\View\LoginregisterView.xaml;MVVM\View\LoginView.xaml;MVVM\View\RegisterView.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\MapView.xaml;Theme\button.xaml;Theme\LoginButton.xaml;MainWindow.xaml;
 
 False
 

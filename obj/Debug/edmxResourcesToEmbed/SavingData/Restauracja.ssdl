@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="p4.BloggingContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Restaurants">
+    <Key>
+      <PropertyRef Name="RestaurantID" />
+    </Key>
+    <Property Name="RestaurantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nameofrestaurant" Type="nvarchar(max)" />
+    <Property Name="Adressofrestaurant" Type="nvarchar(max)" />
+    <Property Name="UserDataWhileLogged_UserDataWhileLoggedID" Type="int" />
+  </EntityType>
+  <EntityType Name="UserDataWhileLoggeds">
+    <Key>
+      <PropertyRef Name="UserDataWhileLoggedID" />
+    </Key>
+    <Property Name="UserDataWhileLoggedID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UserRegisters">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lastname" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID">
+    <End Role="UserDataWhileLoggeds" Type="Self.UserDataWhileLoggeds" Multiplicity="0..1" />
+    <End Role="Restaurants" Type="Self.Restaurants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDataWhileLoggeds">
+        <PropertyRef Name="UserDataWhileLoggedID" />
+      </Principal>
+      <Dependent Role="Restaurants">
+        <PropertyRef Name="UserDataWhileLogged_UserDataWhileLoggedID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID">
+    <End Role="UserRegisters" Type="Self.UserRegisters" Multiplicity="1" />
+    <End Role="UserDataWhileLoggeds" Type="Self.UserDataWhileLoggeds" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserRegisters">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserDataWhileLoggeds">
+        <PropertyRef Name="UserDataWhileLoggedID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="p4BloggingContextModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restaurants" EntityType="Self.Restaurants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDataWhileLoggeds" EntityType="Self.UserDataWhileLoggeds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRegisters" EntityType="Self.UserRegisters" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID" Association="Self.FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID">
+      <End Role="UserDataWhileLoggeds" EntitySet="UserDataWhileLoggeds" />
+      <End Role="Restaurants" EntitySet="Restaurants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID" Association="Self.FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID">
+      <End Role="UserRegisters" EntitySet="UserRegisters" />
+      <End Role="UserDataWhileLoggeds" EntitySet="UserDataWhileLoggeds" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -17,7 +17,7 @@ namespace p4_projekt.MVVM.ViewModel
 
 
         public HomeViewModel HomeVM { get; set; }
-        public RestaurantsViewModel DiscoveryVM { get; set; }
+        public DiscoveryViewModel DiscoveryVM { get; set; }
         public MapViewModel MapVM { get; set; }
         public FavouriteRestaurantViewModel FavResVM { get; set; }
 
@@ -34,7 +34,7 @@ namespace p4_projekt.MVVM.ViewModel
         public MainViewModel()
         {
             HomeVM = new HomeViewModel();
-            DiscoveryVM = new RestaurantsViewModel();
+            DiscoveryVM = new DiscoveryViewModel();
             MapVM = new MapViewModel();
             FavResVM = new FavouriteRestaurantViewModel();
 

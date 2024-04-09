@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="p4.BloggingContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Restaurants">
+    <Key>
+      <PropertyRef Name="RestaurantID" />
+    </Key>
+    <Property Name="RestaurantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nameofrestaurant" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adressofrestaurant" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserDataWhileLogged_UserDataWhileLoggedID" Type="Int32" />
+    <NavigationProperty Name="UserDataWhileLoggeds" Relationship="Self.FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID" FromRole="Restaurants" ToRole="UserDataWhileLoggeds" />
+  </EntityType>
+  <EntityType Name="UserDataWhileLoggeds">
+    <Key>
+      <PropertyRef Name="UserDataWhileLoggedID" />
+    </Key>
+    <Property Name="UserDataWhileLoggedID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Restaurants" Relationship="Self.FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID" FromRole="UserDataWhileLoggeds" ToRole="Restaurants" />
+    <NavigationProperty Name="UserRegisters" Relationship="Self.FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID" FromRole="UserDataWhileLoggeds" ToRole="UserRegisters" />
+  </EntityType>
+  <EntityType Name="UserRegisters">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserDataWhileLoggeds" Relationship="Self.FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID" FromRole="UserRegisters" ToRole="UserDataWhileLoggeds" />
+  </EntityType>
+  <Association Name="FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID">
+    <End Role="UserDataWhileLoggeds" Type="Self.UserDataWhileLoggeds" Multiplicity="0..1" />
+    <End Role="Restaurants" Type="Self.Restaurants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDataWhileLoggeds">
+        <PropertyRef Name="UserDataWhileLoggedID" />
+      </Principal>
+      <Dependent Role="Restaurants">
+        <PropertyRef Name="UserDataWhileLogged_UserDataWhileLoggedID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID">
+    <End Role="UserRegisters" Type="Self.UserRegisters" Multiplicity="1" />
+    <End Role="UserDataWhileLoggeds" Type="Self.UserDataWhileLoggeds" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserRegisters">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserDataWhileLoggeds">
+        <PropertyRef Name="UserDataWhileLoggedID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="Restaurants" EntityType="Self.Restaurants" />
+    <EntitySet Name="UserDataWhileLoggeds" EntityType="Self.UserDataWhileLoggeds" />
+    <EntitySet Name="UserRegisters" EntityType="Self.UserRegisters" />
+    <AssociationSet Name="FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID" Association="Self.FK_dbo_Restaurants_dbo_UserDataWhileLoggeds_UserDataWhileLogged_UserDataWhileLoggedID">
+      <End Role="UserDataWhileLoggeds" EntitySet="UserDataWhileLoggeds" />
+      <End Role="Restaurants" EntitySet="Restaurants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID" Association="Self.FK_dbo_UserDataWhileLoggeds_dbo_UserRegisters_UserDataWhileLoggedID">
+      <End Role="UserRegisters" EntitySet="UserRegisters" />
+      <End Role="UserDataWhileLoggeds" EntitySet="UserDataWhileLoggeds" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

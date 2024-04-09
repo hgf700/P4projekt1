@@ -10,7 +10,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/button.xaml"/>
-                <ResourceDictionary Source="Theme/TextBOX.xaml"/>
                 <ResourceDictionary Source="Theme/LoginButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             
@@ -18,8 +17,8 @@
                 <view:HomeView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewmodel:RestaurantsViewModel}">
-                <view:RestaurantView/>
+            <DataTemplate DataType="{x:Type viewmodel:DiscoveryViewModel}">
+                <view:DiscoveryView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewmodel:MapViewModel}">

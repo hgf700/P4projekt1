@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\migrations\\202403211404550_restaurantmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:migrations\\202403211404550_restaurantmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\mvvm\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mvvm\\view\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\mvvm\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mvvm\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\codefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:codefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\mvvm\\view\\mapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mvvm\\view\\mapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|c:\\users\\user098\\documents\\github\\p4projekt1\\mvvm\\view\\mapview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78FB2FF-E93B-4EA6-8187-38E453DCC25D}|p4_projekt.csproj|solutionrelative:mvvm\\view\\mapview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,55 +29,57 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-18T21:42:06.524Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "202403211404550_RestaurantMigration.cs",
-              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Migrations\\202403211404550_RestaurantMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\202403211404550_RestaurantMigration.cs",
-              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Migrations\\202403211404550_RestaurantMigration.cs",
-              "RelativeToolTip": "Migrations\\202403211404550_RestaurantMigration.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAiwCgAAAAoAAAA",
+              "Title": "HomeView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\HomeView.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM\\View\\HomeView.xaml.cs",
+              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\HomeView.xaml.cs",
+              "RelativeToolTip": "MVVM\\View\\HomeView.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T14:05:09.674Z",
+              "WhenOpened": "2024-04-09T15:01:03.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Configuration.cs",
-              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Migrations\\Configuration.cs",
-              "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
-              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\Migrations\\Configuration.cs",
-              "RelativeToolTip": "Migrations\\Configuration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T13:21:10.76Z",
+              "Title": "HomeView.xaml",
+              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\HomeView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\View\\HomeView.xaml",
+              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\HomeView.xaml",
+              "RelativeToolTip": "MVVM\\View\\HomeView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-09T15:00:59.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CodeFirst.cs",
-              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\CodeFirst.cs",
-              "RelativeDocumentMoniker": "CodeFirst.cs",
-              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\CodeFirst.cs",
-              "RelativeToolTip": "CodeFirst.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAkAAAA",
+              "Title": "MapView.xaml",
+              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\MapView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\View\\MapView.xaml",
+              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\MapView.xaml",
+              "RelativeToolTip": "MVVM\\View\\MapView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-09T14:50:18.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MapView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\MapView.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM\\View\\MapView.xaml.cs",
+              "ToolTip": "C:\\Users\\USER098\\Documents\\GitHub\\P4projekt1\\MVVM\\View\\MapView.xaml.cs",
+              "RelativeToolTip": "MVVM\\View\\MapView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T13:20:56.291Z",
+              "WhenOpened": "2024-04-09T14:50:17.839Z",
               "EditorCaption": ""
             }
           ]

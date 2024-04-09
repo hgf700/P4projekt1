@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tabele/model1.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tabele/model1.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("html%20map/plik.html")]
 
 

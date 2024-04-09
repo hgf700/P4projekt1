@@ -1,28 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using p4;
+using p4_projekt.Core;
+using p4_projekt.MVVM.View;
 
 namespace p4_projekt
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Loginregister_Click(object sender, RoutedEventArgs e)
+        {
+            LoginregisterView loginregister = new LoginregisterView();
+            loginregister.Show();
+        }
+
+        private async void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            string searchTerm = SearchTermTextBox.Text;
+
+
+            await App.SaveRestaurantsFromYelpToDatabase(searchTerm);
+
+
+        }
+
     }
 }
