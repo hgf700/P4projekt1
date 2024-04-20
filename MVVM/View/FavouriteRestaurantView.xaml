@@ -8,9 +8,72 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Background="Red">
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-            
-            
-        </ScrollViewer>
+        <DataGrid x:Name="favouriteRestaurantsDataGrid" 
+              AutoGenerateColumns="False" 
+              IsReadOnly="True"
+              CanUserAddRows="False" 
+              CanUserDeleteRows="False" 
+              CanUserReorderColumns="False"
+              CanUserResizeRows="False"
+              CanUserResizeColumns="False"
+              >
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="ID Restauracji" Binding="{Binding RestaurantID}" Width="Auto"/>
+            <DataGridTextColumn Header="Otwarte" Binding="{Binding Isclosed}" Width="Auto"/>
+            <DataGridTextColumn Header="Nazwa Restauracji" Binding="{Binding Nameofrestaurant}" Width="Auto"/>
+
+            <DataGridTemplateColumn Header="Url zdjęcia" Width="90">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Hyperlink NavigateUri="{Binding Imageurlofrestaurant}" RequestNavigate="Hyperlink_RequestNavigate">
+                                <TextBlock Text="{Binding Imageurlofrestaurant}" TextDecorations="None" Foreground="Blue"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn Header="Url restauracji" Width="90">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Hyperlink NavigateUri="{Binding Urlofrestaurant}" RequestNavigate="Hyperlink_RequestNavigate">
+                                <TextBlock Text="{Binding Urlofrestaurant}" TextDecorations="None" Foreground="Blue"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTextColumn Header="Ilość ocen" Binding="{Binding Reviewcount}" Width="Auto"/>
+            <DataGridTextColumn Header="Ocena" Binding="{Binding Rating}" Width="Auto"/>
+            <DataGridTextColumn Header="Cena" Binding="{Binding Price}" Width="Auto"/>
+            <DataGridTextColumn Header="Adres restauracji" Binding="{Binding Adressofrestaurant}" Width="Auto"/>
+            <DataGridTextColumn Header="Miasto" Binding="{Binding City}" Width="Auto"/>
+            <DataGridTextColumn Header="Nr.Telefonu" Binding="{Binding Phonenumber}" Width="Auto"/>
+
+            <DataGridTextColumn Header="Szerokość geograficzna" Binding="{Binding Latitude}" Width="Auto"/>
+            <DataGridTextColumn Header="Długość geograficzna" Binding="{Binding Longtitude}" Width="Auto"/>
+
+            <DataGridTemplateColumn Header="Lokalizacja" Width="90">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Hyperlink NavigateUri="{Binding LocalizationMapURL}" RequestNavigate="Hyperlink_RequestNavigate">
+                                <TextBlock Text="{Binding LocalizationMapURL}" TextDecorations="None" Foreground="Blue"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+
+           
+        </DataGrid.Columns>
+    </DataGrid>
+
+
+
     </Grid>
 </UserControl>

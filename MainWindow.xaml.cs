@@ -12,6 +12,7 @@ namespace p4_projekt
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void Loginregister_Click(object sender, RoutedEventArgs e)

@@ -1,11 +1,15 @@
 ﻿using Newtonsoft.Json;
 using p4;
+using p4_projekt.MVVM.View;
 using RestSharp;
 using System;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Markup;
 
 namespace p4_projekt
 {
@@ -14,16 +18,19 @@ namespace p4_projekt
     /// </summary>
     public partial class App : Application
     {
-
+        public static string Latitude { get; set; }
+        public static string Longitude { get; set; }
         public static string SearchTerm { get; set; }
+        public static event EventHandler RestaurantsDownloaded;
 
+        public static UserRegister LoggedInUser { get; set; }
         protected override async void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
             try
             {
-                // Wywołaj metodę z odpowiedniej przestrzeni nazw
                 await SaveRestaurantsFromYelpToDatabase(SearchTerm);
+
             }
             catch (Exception ex)
             {
@@ -31,7 +38,40 @@ namespace p4_projekt
             }
         }
 
-        public static async Task SaveRestaurantsFromYelpToDatabase(string searchTerm)
+
+
+
+        public static async Task<string> HandleFailedResponse(HttpResponseMessage response)
+        {
+            string errorMessage = string.Empty;
+
+            if (!response.IsSuccessStatusCode)
+            {
+                try
+                {
+                    errorMessage = await response.Content.ReadAsStringAsync();
+                    RestaurantsDownloaded?.Invoke(null, EventArgs.Empty);
+                }
+                catch (Exception ex)
+                {
+                    errorMessage = $"Failed to read response content: {ex.Message}";
+                }
+
+                MessageBox.Show($"Yelp API. Status code: {response.StatusCode}\nError message: {errorMessage}");
+            }
+
+            return errorMessage;
+        }
+
+        public static class ExceptionHandler
+        {
+            public static void ShowExceptionMessage(Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        public static async Task<dynamic> SaveRestaurantsFromYelpToDatabase(string searchTerm)
         {
             try
             {
@@ -44,40 +84,74 @@ namespace p4_projekt
 
                 if (response.IsSuccessful)
                 {
-                    // Implementacja kodu obsługującego udane zapytanie
                     string jsonString = response.Content;
                     dynamic data = JsonConvert.DeserializeObject(jsonString);
 
                     using (var context = new BloggingContext())
                     {
+
+                        //var existingRestaurants = context.Restaurants.ToList();
+                        //context.Restaurants.RemoveRange(existingRestaurants);
+
                         foreach (var business in data.businesses)
                         {
-                            Restaurant restaurant = new Restaurant
+                            try
                             {
-                                Nameofrestaurant = business.name,
-                                Imageurlofrestaurant = business.image_url,
-                                Urlofrestaurant = business.url,
-                                Reviewcount = business.review_count,
-                                Price = business.price,
-                                Adressofrestaurant = business.location.address1,
-                                City = business.location.city,
-                                Phonenumber = business.phone,
-                                Latitude = business.coordinates.latitude,
-                                Longtitude = business.coordinates.longitude
-                            };
 
-                            context.Restaurants.Add(restaurant);
+                               
+
+                                var latitude = business.coordinates.latitude.ToString(CultureInfo.InvariantCulture);
+                                var longitude = business.coordinates.longitude.ToString(CultureInfo.InvariantCulture);
+                                App.Latitude = latitude;
+                                App.Longitude = longitude;
+                                var localization_map_url = $"https://www.google.com/maps/search/?api=1&query={latitude},{longitude}";
+
+                                Restaurant restaurant = new Restaurant
+                                {
+                                    Nameofrestaurant = business.name,
+                                    Imageurlofrestaurant = business.image_url,
+                                    Urlofrestaurant = business.url,
+                                    Reviewcount = business.review_count,
+                                    Rating = business.rating,
+                                    Price = business.price,
+                                    Adressofrestaurant = business.location.address1,
+                                    City = business.location.city,
+                                    Phonenumber = business.phone,
+                                    Latitude = latitude,
+                                    Longtitude = longitude,
+                                    LocalizationMapURL = localization_map_url,
+                                };
+                                context.Restaurants.Add(restaurant);
+                            }
+                            catch (Exception ex)
+                            {
+                                ExceptionHandler.ShowExceptionMessage(ex);
+                            }
                         }
-
-                        await context.SaveChangesAsync();
+                        context.SaveChanges();
                     }
+
+                    return data; // Zwróć dane
+                }
+                else
+                {
+                    //Console.WriteLine
+                    //MessageBox.Show
+                    Console.WriteLine($"Yelp API. Status code: {response.StatusCode}");
+                    //MessageBox.Show($" Yelp API. Status code: {response.StatusCode}");
+                    return null; // Zwróć null w przypadku błędu
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($" ex {ex.Message}", "Brak wyszukiwanego terminu", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return null; // Zwróć null w przypadku błędu
             }
         }
+
+
+
+
         private void ShowLastTwentyRestaurants()
         {
             using (var context = new BloggingContext())
@@ -86,6 +160,9 @@ namespace p4_projekt
                 //restaurantDataGrid.ItemsSource = lastTwentyRestaurants;
             }
         }
+
+
+
         public class BloggingContext : DbContext
         {
             public BloggingContext() : base("name=BloggingContext")

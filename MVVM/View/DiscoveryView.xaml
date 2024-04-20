@@ -14,6 +14,7 @@
 
 
     <Grid>
+        
         <DataGrid x:Name="restaurantDataGrid" 
                   AutoGenerateColumns="False" 
                   IsReadOnly="True"
@@ -61,24 +62,27 @@
 
                 <DataGridTextColumn Header="Szerokość geograficzna" Binding="{Binding Latitude}" Width="Auto"/>
                 <DataGridTextColumn Header="Długość geograficzna" Binding="{Binding Longtitude}" Width="Auto"/>
-
-                <!--<DataGridTemplateColumn Header="Lokalizacja" Width="Auto">
+                
+                <DataGridTemplateColumn Header="Lokalizacja" Width="90">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock>
-                                <Hyperlink NavigateUri="{Binding Converter={StaticResource GoogleMapsConverter}}">
-                                    <TextBlock Text="Google Maps" TextDecorations="None" Foreground="Blue"/>
+                                <Hyperlink NavigateUri="{Binding LocalizationMapURL}" RequestNavigate="Hyperlink_RequestNavigate">
+                                    <TextBlock Text="{Binding LocalizationMapURL}" TextDecorations="None" Foreground="Blue"/>
                                 </Hyperlink>
                             </TextBlock>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>-->
+                </DataGridTemplateColumn>
 
 
-
-
-
-
+                <DataGridTemplateColumn Header="Zapisz" Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Zapisz" Click="SaveButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

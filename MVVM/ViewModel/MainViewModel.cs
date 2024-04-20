@@ -1,4 +1,5 @@
 ﻿using p4_projekt.Core;
+using p4_projekt.MVVM.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,8 @@ namespace p4_projekt.MVVM.ViewModel
     {
         public RelayCommand HomeViemCommand { get; set; }
         public RelayCommand DiscoveryViewCommand { get; set; }
-        public RelayCommand MapViewCommand { get; set; }        
-        public RelayCommand FavouriteRestaurantViewCommand { get; set; }        
-
-
+        public RelayCommand MapViewCommand { get; set; }
+        public RelayCommand FavouriteRestaurantViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
@@ -23,12 +22,14 @@ namespace p4_projekt.MVVM.ViewModel
 
         private object _currentView;
 
-        public object CurrentView 
-        { 
-            get { return _currentView; } 
-            set { _currentView = value; 
-            OnPropertyChanged();
-            } 
+        public object CurrentView
+        {
+            get { return _currentView; }
+            set
+            {
+                _currentView = value;
+                OnPropertyChanged();
+            }
         }
 
         public MainViewModel()
@@ -58,5 +59,5 @@ namespace p4_projekt.MVVM.ViewModel
             });
 
         }
-    }    
+    }
 }

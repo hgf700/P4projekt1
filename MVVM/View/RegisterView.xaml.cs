@@ -59,9 +59,6 @@ namespace p4_projekt.MVVM.View
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-
-                // Display Message
                 MessageBox.Show("Something went wrong. Please try again later.", "Fail", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

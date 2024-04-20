@@ -17,19 +17,8 @@ namespace p4
         public string Lastname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public virtual UserDataWhileLogged UserDataWhileLogged { get; set; }
-    }
-
-    public class UserDataWhileLogged
-    {
-        [Key]
-        [ForeignKey("UserRegister")]
-        public int UserDataWhileLoggedID { get; set; }
-        public int UserID { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public List<Restaurant> LikedRestaurants { get; set; }
-        public virtual UserRegister UserRegister { get; set; }
+        //public virtual ICollection<Restaurant> LikedRestaurants { get; set; }
+        public int LikedRestaurants { get; set; }
     }
 
     public class Restaurant
@@ -60,12 +49,12 @@ namespace p4
         public string Latitude { get; set; }
         [JsonProperty("longitude")]
         public string Longtitude { get; set; }
+        public string LocalizationMapURL {  get; set; }
     }
 
     public class BloggingContext : DbContext
     {
-        public DbSet<UserRegister> UserRegisters { get; set; }
-        public DbSet<UserDataWhileLogged> UserDataWhileLoggeds { get; set; }
+        public DbSet<UserRegister> UserData { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
     }
 }
