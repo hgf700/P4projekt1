@@ -76,12 +76,8 @@ C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\System.Threading.Tasks.Ex
 C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\System.ValueTuple.xml
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\DiscoveryView.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\MVVM\View\DiscoveryView.baml
-C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt_Content.g.cs
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.csproj.SuggestedBindingRedirects.cache
 C:\Users\USER098\Documents\GitHub\P4projekt1\obj\Debug\p4_projekt.exe.config
-C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\GMap.NET.Core.dll
-C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\GMap.NET.WindowsForms.dll
-C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\GMap.NET.WindowsPresentation.dll
 C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\System.Data.SqlClient.dll
 C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\System.Data.SQLite.dll
 C:\Users\USER098\Documents\GitHub\P4projekt1\bin\Debug\System.Data.SQLite.EF6.dll

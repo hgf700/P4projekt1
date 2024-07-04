@@ -7,7 +7,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Navigation;
-using GMap.NET.MapProviders;
 using Newtonsoft.Json.Linq;
 using p4;
 using RestSharp;

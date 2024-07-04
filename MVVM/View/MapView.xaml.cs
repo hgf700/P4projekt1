@@ -11,7 +11,7 @@ using System.Globalization;
 using System.Windows.Markup;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using GMap.NET;
+
 
 
 namespace p4_projekt.MVVM.View
